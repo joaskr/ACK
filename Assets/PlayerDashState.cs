@@ -23,7 +23,7 @@ public class PlayerDashState : PlayerState
     public override void Update()
     {
         base.Update();
-        player.SetVelocity(player.dashSpeed * player.facingDir, rb.velocity.y);
+        player.SetVelocity(player.dashSpeed * player.dashDirection, 0);
         if(stateTimer < 0)
         {
             stateMachine.ChangeState(player.idleState);
