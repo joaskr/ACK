@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public bool isBusy { get; private set; }
+
+    [Header("Attack details")]
+    public Vector2[] attackMovement;
+
     [Header("Move info")]
     public float moveSpeed = 12f;
     public float jumpForce;
@@ -67,6 +72,13 @@ public class Player : MonoBehaviour
     {
         stateMachine.currentState.Update();
         CheckForDashInput();
+    }
+
+    public IEnumerator BusyFor(float _seconds)
+    {
+        isBusy = true;
+        yield return new WaitForSeconds(_seconds);
+        isBusy = false;
     }
 
     public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTrigger();
