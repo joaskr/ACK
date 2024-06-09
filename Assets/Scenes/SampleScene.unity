@@ -184,7 +184,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -246,6 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7c3c59565c8474b8b1ef90aa3565d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 8
+  jumpForce: 12
 --- !u!4 &557752553
 Transform:
   m_ObjectHideFlags: 0
@@ -321,8 +323,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.23683292, y: -0.760736}
-  m_Size: {x: 0.9449588, y: 1.2870693}
+  m_Offset: {x: 0.23683292, y: -1.066918}
+  m_Size: {x: 0.9449588, y: 1.8994334}
   m_Direction: 0
 --- !u!1 &1480428191
 GameObject:
