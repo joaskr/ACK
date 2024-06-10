@@ -21,23 +21,21 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -98011998, guid: 206caf8d4b70ea84ea62d97e39c67bab, type: 3}
-    - time: 0.1
       value: {fileID: 1335053863, guid: 206caf8d4b70ea84ea62d97e39c67bab, type: 3}
-    - time: 0.2
+    - time: 0.083333336
       value: {fileID: 1538341494, guid: 206caf8d4b70ea84ea62d97e39c67bab, type: 3}
-    - time: 0.3
+    - time: 0.16666667
       value: {fileID: 707696778, guid: 206caf8d4b70ea84ea62d97e39c67bab, type: 3}
-    - time: 0.4
+    - time: 0.25
       value: {fileID: -720574030, guid: 206caf8d4b70ea84ea62d97e39c67bab, type: 3}
-    - time: 0.5
-      value: {fileID: -1685392588, guid: 206caf8d4b70ea84ea62d97e39c67bab, type: 3}
+    - time: 0.33333334
+      value: {fileID: -542083596, guid: 1e4f18db6598fbf4bb0b7ce308f80af3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 10
+  m_SampleRate: 12
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -54,18 +52,17 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -98011998, guid: 206caf8d4b70ea84ea62d97e39c67bab, type: 3}
     - {fileID: 1335053863, guid: 206caf8d4b70ea84ea62d97e39c67bab, type: 3}
     - {fileID: 1538341494, guid: 206caf8d4b70ea84ea62d97e39c67bab, type: 3}
     - {fileID: 707696778, guid: 206caf8d4b70ea84ea62d97e39c67bab, type: 3}
     - {fileID: -720574030, guid: 206caf8d4b70ea84ea62d97e39c67bab, type: 3}
-    - {fileID: -1685392588, guid: 206caf8d4b70ea84ea62d97e39c67bab, type: 3}
+    - {fileID: -542083596, guid: 1e4f18db6598fbf4bb0b7ce308f80af3, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6
+    m_StopTime: 0.4166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -84,4 +81,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.33333334
+    functionName: AnimationTrigger
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
