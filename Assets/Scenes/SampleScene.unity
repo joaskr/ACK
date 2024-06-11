@@ -943,6 +943,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7c3c59565c8474b8b1ef90aa3565d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachCheck: {fileID: 796796786}
+  attackCheckRadius: 0.8
   groundCheck: {fileID: 828391434}
   groundCheckDistance: 0.15
   wallCheck: {fileID: 109301609}
@@ -975,6 +977,7 @@ Transform:
   - {fileID: 2091507612}
   - {fileID: 828391434}
   - {fileID: 109301609}
+  - {fileID: 796796786}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &557752554
@@ -1479,6 +1482,37 @@ Transform:
   - {fileID: 494704944}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &796796785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 796796786}
+  m_Layer: 6
+  m_Name: AttackCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &796796786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796796785}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.08847188, z: -0, w: 0.99607867}
+  m_LocalPosition: {x: 1.6, y: -1.21, z: 0}
+  m_LocalScale: {x: 0.48042253, y: 0.5288193, z: 0.6528633}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 557752553}
+  m_LocalEulerAnglesHint: {x: 0, y: 10.151, z: 0}
 --- !u!1 &828391433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,6 +1915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef8e473f050ec10468f5254f5e5eadda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachCheck: {fileID: 1299040314}
+  attackCheckRadius: 0.8
   groundCheck: {fileID: 1735740200}
   groundCheckDistance: 0.4
   wallCheck: {fileID: 1423466786}
@@ -1913,7 +1949,39 @@ Transform:
   - {fileID: 326727998}
   - {fileID: 1735740200}
   - {fileID: 1423466786}
+  - {fileID: 1299040314}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1299040313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1299040314}
+  m_Layer: 7
+  m_Name: AttackCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1299040314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299040313}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.44, y: -0.4, z: 0}
+  m_LocalScale: {x: 1.0332646, y: 1.0332646, z: 1.0332646}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1218532168}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1389154660
 GameObject:
