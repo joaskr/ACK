@@ -9,4 +9,16 @@ public class EnemySkaletonAnimationTriggers : MonoBehaviour
     {
         enemy.AnimationFinishTrigger();
     }
+
+    private void AttackTrigger()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(enemy.attachCheck.position, enemy.attackCheckRadius);
+        foreach(var hit in colliders)
+        {
+            if(hit.GetComponent<Player>() != null)
+            {
+                hit.GetComponent<Player>().Damage();
+            }
+        }
+    }
 }
