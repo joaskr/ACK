@@ -21,7 +21,8 @@ public class Player : Entity
     public float dashDuration;
     public float dashDirection { get; private set; }
 
-    
+    public SkillManager skill { get; private set; }
+
 
 
 
@@ -57,6 +58,7 @@ public class Player : Entity
     protected override void Start()
     {
         base.Start();
+        skill = SkillManager.instance;
         stateMachine.Initialize(idleState);
     }
 
