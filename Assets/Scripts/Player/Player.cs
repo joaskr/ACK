@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Player : Entity
 {
+
     public bool isBusy { get; private set; }
 
     [Header("Attack details")]
@@ -15,6 +16,7 @@ public class Player : Entity
     [Header("Move info")]
     public float moveSpeed = 12f;
     public float jumpForce;
+    public float swordReturnImpact;
 
     [Header("Dash info")]
     public float dashSpeed;
@@ -22,8 +24,7 @@ public class Player : Entity
     public float dashDirection { get; private set; }
 
     public SkillManager skill { get; private set; }
-
-
+    public GameObject sword { get; private set; }
 
 
     #region States
@@ -73,6 +74,17 @@ public class Player : Entity
         base.Update();
         stateMachine.currentState.Update();
         CheckForDashInput();
+    }
+
+    public void AssignNewSword(GameObject _newSword)
+    {
+        sword = _newSword;
+    }
+
+    public void ClearSword()
+    {
+        stateMachine.ChangeState(catchSword);
+        Destroy(sword);
     }
 
     public IEnumerator BusyFor(float _seconds)
