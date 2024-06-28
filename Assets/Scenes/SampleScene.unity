@@ -1143,11 +1143,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 557752551}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e966d434b1ad8443995ec2f91d3a5c6, type: 3}
+  m_Script: {fileID: 11500000, guid: a62431caf4d1a6440a14cecbb09ccc11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  maxHealth: 100
+  damage:
+    baseValue: 0
+    modifiers: 
+  maxHealth:
+    baseValue: 0
+    modifiers: 
 --- !u!1 &576224751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,11 +2048,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1218532168}
+  - component: {fileID: 1218532170}
   - component: {fileID: 1218532167}
   - component: {fileID: 1218532169}
   - component: {fileID: 1218532166}
   - component: {fileID: 1218532165}
-  - component: {fileID: 1218532170}
   m_Layer: 7
   m_Name: Enemy_Skeleton
   m_TagString: Untagged
@@ -2205,11 +2209,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1218532164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e966d434b1ad8443995ec2f91d3a5c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 482fd9f0c40ddbc479e94bd0c25d86cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  maxHealth: 100
+  damage:
+    baseValue: 0
+    modifiers: 
+  maxHealth:
+    baseValue: 0
+    modifiers: 
 --- !u!1 &1269053732
 GameObject:
   m_ObjectHideFlags: 0
