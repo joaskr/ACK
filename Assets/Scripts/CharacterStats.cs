@@ -37,6 +37,5 @@ public class CharacterStats : MonoBehaviour
 
     protected virtual void Die()
     {
-        throw new NotImplementedException();
     }
 }
