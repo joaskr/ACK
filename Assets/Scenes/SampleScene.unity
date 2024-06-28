@@ -998,6 +998,7 @@ GameObject:
   - component: {fileID: 557752556}
   - component: {fileID: 557752555}
   - component: {fileID: 557752554}
+  - component: {fileID: 557752557}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -1133,6 +1134,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitMat: {fileID: 2100000, guid: b06f2353cf99bcb49adcad4f5a03d034, type: 2}
+--- !u!114 &557752557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557752551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e966d434b1ad8443995ec2f91d3a5c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  maxHealth: 100
 --- !u!1 &576224751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2033,6 +2048,7 @@ GameObject:
   - component: {fileID: 1218532169}
   - component: {fileID: 1218532166}
   - component: {fileID: 1218532165}
+  - component: {fileID: 1218532170}
   m_Layer: 7
   m_Name: Enemy_Skeleton
   m_TagString: Untagged
@@ -2180,6 +2196,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitMat: {fileID: 2100000, guid: b06f2353cf99bcb49adcad4f5a03d034, type: 2}
+--- !u!114 &1218532170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218532164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e966d434b1ad8443995ec2f91d3a5c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  maxHealth: 100
 --- !u!1 &1269053732
 GameObject:
   m_ObjectHideFlags: 0
@@ -2257,6 +2287,9 @@ MonoBehaviour:
   clonePrefab: {fileID: 6613772771702712657, guid: ac1f8c32809fab648a45d532969651fb, type: 3}
   cloneDuration: 1.5
   canAttack: 1
+  createCloneOnDashStart: 0
+  createCloneOnDashOver: 0
+  canCreateCloneOnCounter: 0
 --- !u!114 &1269053737
 MonoBehaviour:
   m_ObjectHideFlags: 0
