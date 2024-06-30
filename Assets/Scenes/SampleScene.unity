@@ -1285,7 +1285,7 @@ MonoBehaviour:
   attachCheck: {fileID: 796796786}
   attackCheckRadius: 0.8
   groundCheck: {fileID: 828391434}
-  groundCheckDistance: 0.15
+  groundCheckDistance: 0.13
   wallCheck: {fileID: 109301609}
   wallCheckDistance: 0.12
   whatIsGround:
@@ -1397,6 +1397,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitMat: {fileID: 2100000, guid: b06f2353cf99bcb49adcad4f5a03d034, type: 2}
+  chillColor:
+  - {r: 0.07450981, g: 0.7647059, b: 1, a: 0}
+  - {r: 0.073584795, g: 0.76594186, b: 1, a: 0}
+  igniteColor:
+  - {r: 1, g: 0.06666667, b: 0.06666667, a: 1}
+  - {r: 1, g: 0.43137255, b: 0.43137255, a: 1}
+  shockColor:
+  - {r: 0.9953376, g: 1, b: 0, a: 0}
+  - {r: 1, g: 0.9997765, b: 0.26981127, a: 0}
 --- !u!114 &557752557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1410,7 +1419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength:
-    baseValue: 0
+    baseValue: 1
     modifiers: 
   agility:
     baseValue: 0
@@ -1443,7 +1452,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   fireDamage:
-    baseValue: 0
+    baseValue: 1
     modifiers: 
   iceDamage:
     baseValue: 0
@@ -1454,6 +1463,7 @@ MonoBehaviour:
   isIgnited: 0
   isChilled: 0
   isShocked: 0
+  ailmentsDuration: 3
   currentHealth: 100
 --- !u!1 &576224751
 GameObject:
@@ -2534,6 +2544,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitMat: {fileID: 2100000, guid: b06f2353cf99bcb49adcad4f5a03d034, type: 2}
+  chillColor:
+  - {r: 0.07450981, g: 0.7647059, b: 1, a: 0}
+  - {r: 0.073584795, g: 0.76594186, b: 1, a: 0}
+  igniteColor:
+  - {r: 1, g: 0.06666667, b: 0.06666667, a: 1}
+  - {r: 1, g: 0.43137255, b: 0.43137255, a: 1}
+  shockColor:
+  - {r: 0.9953376, g: 1, b: 0, a: 0}
+  - {r: 1, g: 0.9997765, b: 0.26981127, a: 0}
 --- !u!114 &1218532170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2583,7 +2602,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   iceDamage:
-    baseValue: 0
+    baseValue: 1
     modifiers: 
   lightningDamage:
     baseValue: 0
@@ -2591,6 +2610,7 @@ MonoBehaviour:
   isIgnited: 0
   isChilled: 0
   isShocked: 0
+  ailmentsDuration: 3
   currentHealth: 50
 --- !u!70 &1218532171
 CapsuleCollider2D:
@@ -4893,7 +4913,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.75
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5066,7 +5086,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.75
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
