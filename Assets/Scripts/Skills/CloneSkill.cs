@@ -18,21 +18,7 @@ public class CloneSkill : Skill
         newClone.GetComponent<CloneSkillController>().SetupClone(_clonePosition, cloneDuration, canAttack, _offset);
     }
 
-    public void CreateCloneOnDashStart()
-    {
-        if(createCloneOnDashStart)
-        {
-            CreateClone(player.transform, Vector3.zero);
-        }
-    }
 
-    public void CreateCloneOnDashOver()
-    {
-        if (createCloneOnDashOver)
-        {
-            CreateClone(player.transform, Vector3.zero);
-        }
-    }
 
     public void CreateCloneOnCounter(Transform _enemyTransform)
     {
