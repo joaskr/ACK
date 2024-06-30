@@ -9,8 +9,6 @@ public class CloneSkill : Skill
     [SerializeField] private float cloneDuration;
     [Space]
     [SerializeField] private bool canAttack;
-    [SerializeField] private bool createCloneOnDashStart;
-    [SerializeField] private bool createCloneOnDashOver;
     [SerializeField] private bool canCreateCloneOnCounter;
     public void CreateClone(Transform _clonePosition, Vector3 _offset)
     {
