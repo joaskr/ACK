@@ -6,6 +6,7 @@ public class UI : MonoBehaviour
 {
     [SerializeField] private UI_FadeScreen FadeScreen;
     [SerializeField] private GameObject endText;
+    [SerializeField] private GameObject restartButton;
     [Space]
     [SerializeField] private GameObject characterUI;
     [SerializeField] private GameObject skillTreeUI;
@@ -17,6 +18,7 @@ public class UI : MonoBehaviour
     private void Awake()
     {
         SwitchTo(skillTreeUI);
+        FadeScreen.gameObject.SetActive(true);
     }
     // Start is called before the first frame update
     void Start()
@@ -72,14 +74,13 @@ public class UI : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            if (transform.GetChild(i).gameObject.activeSelf)
+            if (transform.GetChild(i).gameObject.activeSelf && transform.GetChild(i).GetComponent<UI_FadeScreen>() == null)
                 return;
         }
         SwitchTo(inGameUI);
     }
     public void SwitchOnEndScreen()
     {
-        SwitchTo(null);
         FadeScreen.FadeOut();
         StartCoroutine(EndScreenCoroutine());
 
@@ -88,5 +89,9 @@ public class UI : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         endText.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        restartButton.SetActive(true);
     }
+
+    public void RestartGameButton() => GameManager.instance.RestartScene();
 }

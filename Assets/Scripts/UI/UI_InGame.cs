@@ -11,7 +11,12 @@ public class UI_InGame : MonoBehaviour
     [SerializeField] private Image parryImage;
     [SerializeField] private Image swordImage;
     [SerializeField] private Image blackholeImage;
+
+    [Header("Souls info")]
     [SerializeField] private TextMeshProUGUI currentSouls;
+    [SerializeField] private float soulsAmount;
+    [SerializeField] private float increaseRate = 100;
+
 
     private SkillManager skills;
     // Start is called before the first frame update
@@ -23,8 +28,9 @@ public class UI_InGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentSouls.text = PlayerManager.instance.getCurrentCurrency().ToString("#,#");
-        if(Input.GetKeyDown(KeyCode.LeftShift) && skills.dash.dashUnlocked) 
+        UpdateSoulsUI();
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && skills.dash.dashUnlocked)
         {
             SetCooldownOf(dashImage);
         }
@@ -45,6 +51,21 @@ public class UI_InGame : MonoBehaviour
         CheckCooldownOf(swordImage, skills.sword.cooldown);
         CheckCooldownOf(blackholeImage, skills.blackhole.cooldown);
     }
+
+    private void UpdateSoulsUI()
+    {
+        if (soulsAmount < PlayerManager.instance.GetCurrency())
+        {
+            soulsAmount += Time.deltaTime * increaseRate;
+        }
+        else
+        {
+            soulsAmount = PlayerManager.instance.GetCurrency();
+        }
+
+        currentSouls.text = ((int)soulsAmount).ToString();
+    }
+
     private void SetCooldownOf(Image _image)
     {
         if(_image.fillAmount <= 0)
