@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SwordSkill : Skill
 {
@@ -17,12 +18,16 @@ public class SwordSkill : Skill
     [SerializeField] private Vector2 launchForce;
     [SerializeField] private float swordGravity;
 
+    [SerializeField] private UI_SkillTreeSlot swordUnlockButton;
+    public bool swordUnlocked { get; private set; }
+
     private Vector2 finalDir;
 
     protected override void Start()
     {
         base.Start();
         GenerateDots();
+        swordUnlockButton.GetComponent<Button>().onClick.AddListener(UnlockSword);
     }
     protected override void Update()
     {
@@ -45,6 +50,12 @@ public class SwordSkill : Skill
         newSwordScript.SetupSword(finalDir, swordGravity, player);
         player.AssignNewSword(newSword);
         DotsActive(false);
+    }
+
+    private void UnlockSword()
+    {
+        if (swordUnlockButton.unlocked)
+            swordUnlocked = true;
     }
 
     public Vector2 AimDirection()
