@@ -33,7 +33,12 @@ public class CloneSkill : Skill
         aggressiveCloneUnlockButton.GetComponent<Button>().onClick.AddListener(UnlockAggresiveClone);
         multipleCloneUnlockButton.GetComponent<Button>().onClick.AddListener(UnlockMultiClone);
     }
-
+    protected override void CheckUnlock()
+    {
+        UnlockCloneAttack();
+        UnlockAggresiveClone();
+        UnlockMultiClone();
+    }
     private void UnlockCloneAttack()
     {
         if (cloneAttackUnlockButton.unlocked)

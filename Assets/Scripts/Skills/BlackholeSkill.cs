@@ -18,6 +18,11 @@ public class BlackholeSkill : Skill
 
     BlackHoleSkillController currentBlackhole;
 
+
+    protected override void CheckUnlock()
+    {
+        UnlockBlackHole();
+    }
     private void UnlockBlackHole ()
     {
         if(blackholeUnlockButton.unlocked)

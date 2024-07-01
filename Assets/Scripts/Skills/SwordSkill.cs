@@ -52,6 +52,10 @@ public class SwordSkill : Skill
         DotsActive(false);
     }
 
+    protected override void CheckUnlock()
+    {
+        UnlockSword();
+    }
     private void UnlockSword()
     {
         if (swordUnlockButton.unlocked)
