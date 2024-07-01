@@ -50,16 +50,53 @@ public class SwordSkillController : MonoBehaviour
         }
     }
 
+    /* private void OnTriggerEnter2D(Collider2D collision)
+     {
+         if (isReturning)
+             return;
+
+         anim.SetBool("Rotation", false);
+         canRotate = false;
+         cd.enabled = false;
+         rb.isKinematic = true;
+         rb.constraints = RigidbodyConstraints2D.FreezeAll;
+         transform.parent = collision.transform;
+     }*/
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (isReturning)
             return;
 
-        anim.SetBool("Rotation", false);
+
+        if (collision.GetComponent<Enemy>() != null)
+        {
+            Enemy enemy = collision.GetComponent<Enemy>();
+            SwordSkillDamage(enemy);
+            StuckInto(collision);
+
+        }
+
+    }
+
+    private void SwordSkillDamage(Enemy enemy)
+    {
+        EnemyStats enemyStats = enemy.GetComponent<EnemyStats>();
+
+        player.stats.DoDamage(enemyStats);
+    }
+
+    private void StuckInto(Collider2D collision)
+    {
+
         canRotate = false;
         cd.enabled = false;
+
         rb.isKinematic = true;
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
+
+
+
+        anim.SetBool("Rotation", false);
         transform.parent = collision.transform;
     }
 }

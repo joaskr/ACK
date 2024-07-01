@@ -29,8 +29,6 @@ public class CloneSkill : Skill
     protected override void Start()
     {
         base.Start();
-
-
         cloneAttackUnlockButton.GetComponent<Button>().onClick.AddListener(UnlockCloneAttack);
         aggressiveCloneUnlockButton.GetComponent<Button>().onClick.AddListener(UnlockAggresiveClone);
         multipleCloneUnlockButton.GetComponent<Button>().onClick.AddListener(UnlockMultiClone);
@@ -67,21 +65,23 @@ public class CloneSkill : Skill
 
     public void CreateClone(Transform _clonePosition, Vector3 _offset)
     {
+
         GameObject newClone = Instantiate(clonePrefab);
+
         newClone.GetComponent<Clone_Skill_Controller>().
-              SetupClone(_clonePosition, cloneDuration, canAttack, _offset, FindClosestEnemy(newClone.transform), canDuplicateClone, chanceToDuplicate, player, attackMultiplier);
+            SetupClone(_clonePosition, cloneDuration, canAttack, _offset, FindClosestEnemy(newClone.transform), canDuplicateClone, chanceToDuplicate, player, attackMultiplier);
     }
 
 
 
     public void CreateCloneWithDelay(Transform _enemyTransform)
     {
-
-            StartCoroutine(CloneDelayCoroutine(_enemyTransform, new Vector3(2 * player.facingDir, 0)));
+        StartCoroutine(CloneDelayCorotine(_enemyTransform, new Vector3(2 * player.facingDir, 0)));
     }
-    private IEnumerator CloneDelayCoroutine(Transform _transform, Vector3 _offset)
+
+    private IEnumerator CloneDelayCorotine(Transform _trasnform, Vector3 _offset)
     {
         yield return new WaitForSeconds(.4f);
-            CreateClone(_transform, _offset);
+        CreateClone(_trasnform, _offset);
     }
 }

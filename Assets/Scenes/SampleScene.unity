@@ -2165,7 +2165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Dash - "Actually here I am"
   skillDescription: You create mirage at your arrival.
-  lockedSkillColor: {r: 0.5245282, g: 0.49384826, b: 0.49384826, a: 1}
+  lockedSkillColor: {r: 0.335849, g: 0.31873968, b: 0.31873968, a: 1}
   unlocked: 0
   shouldBeUnlocked: []
   shouldBeLocked: []
@@ -6766,7 +6766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Parry
   skillDescription: You can parry attack to avoid damage.
-  lockedSkillColor: {r: 0.5245282, g: 0.49384826, b: 0.49384826, a: 1}
+  lockedSkillColor: {r: 0.335849, g: 0.31873968, b: 0.31873968, a: 1}
   unlocked: 0
   shouldBeUnlocked: []
   shouldBeLocked: []
@@ -7132,7 +7132,7 @@ MonoBehaviour:
 
     Your mirage has 30% of
     your damage.'
-  lockedSkillColor: {r: 0.5245282, g: 0.49384826, b: 0.49384826, a: 1}
+  lockedSkillColor: {r: 0.335849, g: 0.31873968, b: 0.31873968, a: 1}
   unlocked: 0
   shouldBeUnlocked: []
   shouldBeLocked: []
@@ -8439,7 +8439,7 @@ MonoBehaviour:
 
     You are invincible in the
     time of dash.'
-  lockedSkillColor: {r: 0.5245282, g: 0.49384826, b: 0.49384826, a: 1}
+  lockedSkillColor: {r: 0.335849, g: 0.31873968, b: 0.31873968, a: 1}
   unlocked: 0
   shouldBeUnlocked: []
   shouldBeLocked: []
@@ -9028,7 +9028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Parry with a mirage
   skillDescription: You create a clone with succsesful parry.
-  lockedSkillColor: {r: 0.5245282, g: 0.49384826, b: 0.49384826, a: 1}
+  lockedSkillColor: {r: 0.335849, g: 0.31873968, b: 0.31873968, a: 1}
   unlocked: 0
   shouldBeUnlocked:
   - {fileID: 1088909419}
@@ -9606,7 +9606,7 @@ MonoBehaviour:
 
     Your mirgae can spawn
     another mirage.'
-  lockedSkillColor: {r: 0.5245282, g: 0.49384826, b: 0.49384826, a: 1}
+  lockedSkillColor: {r: 0.335849, g: 0.31873968, b: 0.31873968, a: 1}
   unlocked: 0
   shouldBeUnlocked:
   - {fileID: 752794923}
@@ -9999,7 +9999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Restore with parry
   skillDescription: You restore a bit of health with succsesful parry.
-  lockedSkillColor: {r: 0.5245282, g: 0.49384826, b: 0.49384826, a: 1}
+  lockedSkillColor: {r: 0.335849, g: 0.31873968, b: 0.31873968, a: 1}
   unlocked: 0
   shouldBeUnlocked: []
   shouldBeLocked: []
@@ -10688,7 +10688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Dash - "Here I am"
   skillDescription: You leave mirage when you dash.
-  lockedSkillColor: {r: 0.5245282, g: 0.49384826, b: 0.49384826, a: 1}
+  lockedSkillColor: {r: 0.335849, g: 0.31873968, b: 0.31873968, a: 1}
   unlocked: 0
   shouldBeUnlocked:
   - {fileID: 947582776}
@@ -11839,7 +11839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 1
-  dashunlockButton: {fileID: 947582776}
+  dashUnlockButton: {fileID: 947582776}
   cloneOnDashUnlockButton: {fileID: 1139135353}
   cloneOnArrivalUnlockButton: {fileID: 229553372}
 --- !u!114 &1269053736
@@ -11854,7 +11854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e8d8739c68c0044924fbd77026ffd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0
+  cooldown: 1
   attackMultiplier: 0
   clonePrefab: {fileID: 6613772771702712657, guid: ac1f8c32809fab648a45d532969651fb, type: 3}
   cloneDuration: 1.5
@@ -14768,7 +14768,7 @@ MonoBehaviour:
 
     Your mirage can apply
     on hit effects.'
-  lockedSkillColor: {r: 0.5245282, g: 0.49384826, b: 0.49384826, a: 1}
+  lockedSkillColor: {r: 0.335849, g: 0.31873968, b: 0.31873968, a: 1}
   unlocked: 0
   shouldBeUnlocked:
   - {fileID: 752794923}
@@ -16438,7 +16438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Sword Throw
   skillDescription: Throws sword into the enemy.
-  lockedSkillColor: {r: 0.5245282, g: 0.49384826, b: 0.49384826, a: 1}
+  lockedSkillColor: {r: 0.335849, g: 0.31873968, b: 0.31873968, a: 1}
   unlocked: 0
   shouldBeUnlocked: []
   shouldBeLocked: []
@@ -19183,7 +19183,7 @@ MonoBehaviour:
   skillName: Blackhole
   skillDescription: You trap enemies in a blackhole which allows you to do tons of
     damage.
-  lockedSkillColor: {r: 0.5245282, g: 0.49384826, b: 0.49384826, a: 1}
+  lockedSkillColor: {r: 0.335849, g: 0.31873968, b: 0.31873968, a: 1}
   unlocked: 0
   shouldBeUnlocked:
   - {fileID: 752794923}
@@ -20631,7 +20631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 557752552}
-  currency: 0
+  currency: 100000
 --- !u!4 &2111019208
 Transform:
   m_ObjectHideFlags: 0
