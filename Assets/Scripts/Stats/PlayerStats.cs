@@ -20,4 +20,22 @@ public class PlayerStats : CharacterStats
         base.Die();
         player.Die();
     }
+    public void CloneDoDamage(CharacterStats _targetStats, float _multiplier)
+    {
+        if (TargetCanAvoidAttack(_targetStats))
+            return;
+
+        int totalDamage = damage.GetValue() + strength.GetValue();
+
+        if (_multiplier > 0)
+            totalDamage = Mathf.RoundToInt(totalDamage * _multiplier);
+
+        if (CanCrit())
+        {
+            totalDamage = CalculateCritDamage(totalDamage);
+        }
+
+        totalDamage = CheckTargetArmor(_targetStats, totalDamage);
+        _targetStats.TakeDamage(totalDamage);
+    }
 }

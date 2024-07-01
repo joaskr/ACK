@@ -11855,9 +11855,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 0
+  attackMultiplier: 0
   clonePrefab: {fileID: 6613772771702712657, guid: ac1f8c32809fab648a45d532969651fb, type: 3}
   cloneDuration: 1.5
+  cloneAttackUnlockButton: {fileID: 752794923}
+  cloneAttackMultiplier: 0.3
   canAttack: 0
+  aggressiveCloneUnlockButton: {fileID: 1580712475}
+  aggressiveCloneAttackMultiplier: 0.8
+  canDuplicateClone: 0
+  chanceToDuplicate: 60
+  multiCloneAttackMultiplier: 0.3
+  multipleCloneUnlockButton: {fileID: 1066332114}
 --- !u!114 &1269053737
 MonoBehaviour:
   m_ObjectHideFlags: 0
