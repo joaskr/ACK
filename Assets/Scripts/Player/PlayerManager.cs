@@ -27,6 +27,8 @@ public class PlayerManager : MonoBehaviour, ISaveManager
     {
         _data.currency = this.currency;
     }
+
+
     public bool HaveEnoughMoney(int _price)
     {
         if(_price > currency)
