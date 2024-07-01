@@ -36,4 +36,8 @@ public class PlayerManager : MonoBehaviour, ISaveManager
         currency = currency - _price;
         return true;
     }
+    public int getCurrentCurrency()
+    {
+        return currency;
+    }
 }
