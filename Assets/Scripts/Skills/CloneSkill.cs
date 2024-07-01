@@ -9,7 +9,6 @@ public class CloneSkill : Skill
     [SerializeField] private float cloneDuration;
     [Space]
     [SerializeField] private bool canAttack;
-    [SerializeField] private bool canCreateCloneOnCounter;
     public void CreateClone(Transform _clonePosition, Vector3 _offset)
     {
         GameObject newClone = Instantiate(clonePrefab);
@@ -18,14 +17,12 @@ public class CloneSkill : Skill
 
 
 
-    public void CreateCloneOnCounter(Transform _enemyTransform)
+    public void CreateCloneWithDelay(Transform _enemyTransform)
     {
-        if (canCreateCloneOnCounter)
-        {
-            StartCoroutine(CreateCloneWithDelay(_enemyTransform, new Vector3(2 * player.facingDir, 0)));
-        }
+
+            StartCoroutine(CloneDelayCoroutine(_enemyTransform, new Vector3(2 * player.facingDir, 0)));
     }
-    private IEnumerator CreateCloneWithDelay(Transform _transform, Vector3 _offset)
+    private IEnumerator CloneDelayCoroutine(Transform _transform, Vector3 _offset)
     {
         yield return new WaitForSeconds(.4f);
             CreateClone(_transform, _offset);
