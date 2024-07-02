@@ -29,6 +29,8 @@ public class Checkpoint : MonoBehaviour
 
     public void ActivateCheckpoint()
     {
+        if(activationStatus == false)
+            AudioManager.instance.PlaySfx(5, transform);
         activationStatus = true;
         anim.SetBool("active", true);
     }
