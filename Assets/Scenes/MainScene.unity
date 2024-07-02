@@ -588,7 +588,7 @@ MonoBehaviour:
   blackholeImage: {fileID: 1072086992}
   currentSouls: {fileID: 1347407938}
   soulsAmount: 0
-  increaseRate: 100
+  increaseRate: 9999
 --- !u!114 &75995315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2756,6 +2756,11 @@ Transform:
   - {fileID: 380596022}
   m_Father: {fileID: 576224752}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &260896265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4799633891666318293, guid: 7d442fdf2ee743f41ba9ae442fb8d877, type: 3}
+  m_PrefabInstance: {fileID: 3595015506199315534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &268206783
 GameObject:
   m_ObjectHideFlags: 0
@@ -8007,6 +8012,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpoints: []
   closestCheckpointId: 
+  lostCurrencyPrefab: {fileID: 260896265}
+  lostCurrencyAmount: 0
+  lostCurrencyX: 0
+  lostCurrencyY: 0
 --- !u!4 &801812197
 Transform:
   m_ObjectHideFlags: 0
