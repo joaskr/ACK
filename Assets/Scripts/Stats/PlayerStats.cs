@@ -19,6 +19,8 @@ public class PlayerStats : CharacterStats
     {
         base.Die();
         player.Die();
+        GameManager.instance.lostCurrencyAmount = PlayerManager.instance.currency;
+        PlayerManager.instance.currency = 0;
     }
     public void CloneDoDamage(CharacterStats _targetStats, float _multiplier)
     {
