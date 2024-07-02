@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(CapsuleCollider2D))]
+[RequireComponent(typeof(EnemyStats))]
+[RequireComponent(typeof(EntityFx))]
+
 public class Enemy : Entity
 {
     [Header("Stun info")]
@@ -18,8 +23,11 @@ public class Enemy : Entity
     private float defaultMoveSpeed;
 
     [Header("Attack info")]
+    public float agroDistance = 2;
     public float attackDistance;
     public float attackCooldown;
+    public float maxAttackCooldown;
+    public float minAttackCooldown;
     [HideInInspector] public float lastTimeAttacked;
     public EnemyStateMachine stateMachine { get; private set; }
     public string lastAnimBoolName {  get; private set; }
@@ -96,6 +104,10 @@ public class Enemy : Entity
     }
     #endregion
     public virtual void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
+    public virtual void AnimationSpecialAttackTrigger()
+    {
+
+    }
     public virtual RaycastHit2D IsPlayerDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, 50, whatIsPlayer);
     protected override void OnDrawGizmos()
     {

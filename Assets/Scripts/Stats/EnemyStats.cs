@@ -31,7 +31,7 @@ public class EnemyStats : CharacterStats
         base.Die();
         enemy.Die();
         PlayerManager.instance.currency += soulsDropAmount.GetValue();
-
+        Destroy(gameObject, 5f);
     }
     private void ApplyLevelModifiers()
     {

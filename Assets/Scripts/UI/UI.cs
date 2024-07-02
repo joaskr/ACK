@@ -1,8 +1,9 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class UI : MonoBehaviour
+public class UI : MonoBehaviour, ISaveManager
 {
     [SerializeField] private UI_FadeScreen FadeScreen;
     [SerializeField] private GameObject endText;
@@ -14,6 +15,8 @@ public class UI : MonoBehaviour
     [SerializeField] private GameObject inGameUI;
     public UI_StatTooltip statToolTip;
     public UI_SkillToolTip skillToolTip;
+
+    [SerializeField] private UI_volumeSlider[] volumeSettings;
 
     private void Awake()
     {
@@ -52,10 +55,19 @@ public class UI : MonoBehaviour
             if(fadeScreen == false)
                 transform.GetChild(i).gameObject.SetActive(false);
 
-            if (_menu != null)
-            {
-                _menu.SetActive(true);
-            }
+            
+        }
+        if (_menu != null)
+        {
+            AudioManager.instance.PlaySfx(7, null);
+            _menu.SetActive(true);
+        }
+        if(GameManager.instance != null)
+        {
+            if (_menu == inGameUI)
+                GameManager.instance.PauseGame(false);
+            else 
+                GameManager.instance.PauseGame(true);
         }
     }
 
@@ -94,4 +106,25 @@ public class UI : MonoBehaviour
     }
 
     public void RestartGameButton() => GameManager.instance.RestartScene();
+
+    public void LoadData(GameData _data)
+    {
+        foreach(KeyValuePair<string,float> pair in _data.volumeSettings)
+        {
+            foreach(UI_volumeSlider item in volumeSettings)
+            {
+                if (item.parameter == pair.Key)
+                    item.LoadSlider(pair.Value);
+            }
+        }
+    }
+
+    public void SaveData(ref GameData _data)
+    {
+        _data.volumeSettings.Clear();
+        foreach(UI_volumeSlider item in volumeSettings)
+        {
+            _data.volumeSettings.Add(item.parameter, item.slider.value);
+        }
+    }
 }

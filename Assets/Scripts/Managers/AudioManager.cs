@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -14,12 +15,15 @@ public class AudioManager : MonoBehaviour
     public bool playBgm;
     private int bgmIndex;
 
+    private bool canPlaySFX;
+
     private void Awake()
     {
         if (instance != null)
             Destroy(instance.gameObject);
         else
             instance = this;
+        Invoke("AllowSfx", 1f);
     }
 
     private void Update()
@@ -37,8 +41,10 @@ public class AudioManager : MonoBehaviour
     }
     public void PlaySfx(int _sfxIndex, Transform _source)
     {
-       // if (sfx[_sfxIndex].isPlaying)
-         //   return;
+        if (canPlaySFX == false)
+        {
+            return;
+        }
 
         if(_source != null && Vector2.Distance(PlayerManager.instance.player.transform.position, _source.position) > sfxMinimumDistance)
         {
@@ -73,5 +79,7 @@ public class AudioManager : MonoBehaviour
             bgm[i].Stop();
         }
     }
+
+    private void AllowSfx() => canPlaySFX = true;
 }
 

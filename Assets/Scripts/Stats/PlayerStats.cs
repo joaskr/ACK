@@ -15,6 +15,14 @@ public class PlayerStats : CharacterStats
         base.TakeDamage(_damage);
         player.DamageEffect();
     }
+    protected override void DecreaseHealthBy(int _damage)
+    {
+        base.DecreaseHealthBy(_damage);
+        if(_damage > GetMaxHealthValue() * .3f)
+        {
+            player.SetupKnockbackPower(new Vector2(10, 6));
+        }
+    }
     protected override void Die()
     {
         base.Die();

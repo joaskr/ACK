@@ -12,18 +12,20 @@ public class PlayerIdleState : PlayerGroundedState
     {
         base.Enter();
         player.SetZeroVelocity();
+
     }
 
     public override void Exit()
     {
         base.Exit();
+
     }
 
     public override void Update()
     {
         base.Update();
 
-        if(xInput == player.facingDir && player.IsWallDetected())
+        if (xInput == player.facingDir && player.IsWallDetected())
         {
             return;
         }
