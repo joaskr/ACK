@@ -7,6 +7,7 @@ public class GameData
 {
     public int currency;
     public SerializableDictionary<string, bool> skillTree;
+
     public SerializableDictionary<string, bool> checkpoints;
     public string closestCheckpointId;
 
