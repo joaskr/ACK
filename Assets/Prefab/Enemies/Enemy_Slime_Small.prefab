@@ -275,7 +275,7 @@ MonoBehaviour:
   ailmentsDuration: 4
   currentHealth: 0
   soulsDropAmount:
-    baseValue: 10
+    baseValue: 50
     modifiers: 
   level: 1
   percantageModifier: 0.4

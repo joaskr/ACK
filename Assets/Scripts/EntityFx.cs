@@ -14,6 +14,9 @@ public class EntityFx : MonoBehaviour
     [SerializeField] private Color[] igniteColor;
     [SerializeField] private Color[] shockColor;
 
+    private GameObject myHealthBar;
+
+
     private void Start()
     {
         sr = GetComponentInChildren<SpriteRenderer>();
@@ -48,6 +51,20 @@ public class EntityFx : MonoBehaviour
     {
         InvokeRepeating("IgniteColorFx", 0, .3f);
         Invoke("CancelColorChange", _seconds);
+    }
+
+    public void MakeTransprent(bool _transprent)
+    {
+        if (_transprent)
+        {
+            myHealthBar.SetActive(false);
+            sr.color = Color.clear;
+        }
+        else
+        {
+            myHealthBar.SetActive(true);
+            sr.color = Color.white;
+        }
     }
 
     private void IgniteColorFx()

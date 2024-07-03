@@ -19,6 +19,7 @@ public class SlimeIdleState : SlimeGroundedState
     public override void Exit()
     {
         base.Exit();
+        AudioManager.instance.PlaySfx(18, enemy.transform);
 
     }
 
