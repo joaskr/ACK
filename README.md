@@ -21,7 +21,6 @@ get to the castle where the Boss lives, trying to survive the attacks of deadly 
 
 ### Links
 
-- Solution URL: [Github](https://github.com/joaskr/ACOHAF)
 - Live Site URL: [ItchIO](https://joaskr.itch.io/acohar)
 
 ## My process
@@ -30,7 +29,7 @@ get to the castle where the Boss lives, trying to survive the attacks of deadly 
 
 - C#
 - Unity
-- Love
+- Love & coffee
 
 ### Acknowledgement
 
