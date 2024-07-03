@@ -22,6 +22,8 @@ public class Health : MonoBehaviour
                 PlayerManager.instance.player.stats.IncreaseHealthBy(healthBonusAmount);
                 Destroy(gameObject);
             }
+            AudioManager.instance.PlaySfx(8, transform);
+
         }
     }
 }

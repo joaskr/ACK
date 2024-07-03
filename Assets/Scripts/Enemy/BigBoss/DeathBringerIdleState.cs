@@ -25,6 +25,7 @@ public class DeathBringerIdleState : EnemyState
     public override void Exit()
     {
         base.Exit();
+        AudioManager.instance.PlaySfx(19, enemy.transform);
     }
 
     public override void Update()

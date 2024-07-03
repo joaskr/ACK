@@ -28,7 +28,11 @@ public class DeathBringerSpellCastState : EnemyState
         spellTimer -= Time.deltaTime;
 
         if (CanCast())
+        {
             enemy.CastSpell();
+            AudioManager.instance.PlaySfx(12, enemy.transform);
+        }
+
 
 
         if (amountOfSpells <= 0)

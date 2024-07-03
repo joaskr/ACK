@@ -29,6 +29,7 @@ public class PlayerStats : CharacterStats
         player.Die();
         GameManager.instance.lostCurrencyAmount = PlayerManager.instance.currency;
         PlayerManager.instance.currency = 0;
+        AudioManager.instance.PlaySfx(11, transform);
     }
     public void CloneDoDamage(CharacterStats _targetStats, float _multiplier)
     {

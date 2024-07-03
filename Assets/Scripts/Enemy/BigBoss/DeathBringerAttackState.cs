@@ -14,6 +14,7 @@ public class DeathBringerAttackState : EnemyState
         base.Enter();
 
         enemy.chanceToTeleport += 5;
+        AudioManager.instance.PlaySfx(1, enemy.transform);
     }
 
     public override void Exit()
