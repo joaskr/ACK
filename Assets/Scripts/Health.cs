@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private int healthBonusAmount = 50;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.GetComponent<Player>() != null)
+        {
+            if (PlayerManager.instance.player.stats.currentHealth == PlayerManager.instance.player.stats.GetMaxHealthValue())
+                return;
+
+            if (PlayerManager.instance.player.stats.currentHealth + healthBonusAmount > PlayerManager.instance.player.stats.GetMaxHealthValue())
+            {
+                PlayerManager.instance.player.stats.IncreaseHealthBy(PlayerManager.instance.player.stats.GetMaxHealthValue() - PlayerManager.instance.player.stats.currentHealth);
+                Destroy(gameObject);
+            } else
+            {
+                PlayerManager.instance.player.stats.IncreaseHealthBy(healthBonusAmount);
+                Destroy(gameObject);
+            }
+        }
     }
 }

@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour, ISaveManager
 
         foreach (Checkpoint checkpoint in checkpoints)
         {
-            _data.checkpoints.Add(checkpoint.id, checkpoint.activationStatus);
+          _data.checkpoints.Add(checkpoint.id, checkpoint.activationStatus);
         }
     }
     private void LoadClosestCheckpoint(GameData _data)
