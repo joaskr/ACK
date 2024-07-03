@@ -21,8 +21,8 @@ get to the castle where the Boss lives, trying to survive the attacks of deadly 
 
 ### Links
 
-- Solution URL: [Github]([https://github.com/joaskr/ACOHAF)]
-- Live Site URL: [ItchIO]([(https://joaskr.itch.io/acohar)])
+- Solution URL: [Github](https://github.com/joaskr/ACOHAF)
+- Live Site URL: [ItchIO](https://joaskr.itch.io/acohar)
 
 ## My process
 
@@ -36,9 +36,9 @@ get to the castle where the Boss lives, trying to survive the attacks of deadly 
 
 This is my first ever video game and I followed a tutorial from Udemy to complete it. The project took me several dozen hours and I'm quite of myself. At the end of the course, I could understand the basics of game creation and adjust the project on my own.
 Kudos to AlexDev for an amazing course.
-[The Ultimate Guide to Creating an RPG Game in Unity]([https://www.udemy.com/course/2d-rpg-alexdev/])
+[The Ultimate Guide to Creating an RPG Game in Unity](https://www.udemy.com/course/2d-rpg-alexdev/)
 
 ## Author
 
 - GitHub - [@joaskr](https://github.com/joaskr)
-- LinkedIn - [Joanna Skrzypczak]([https://www.frontendmentor.io/profile/joaskr])
+- LinkedIn - [Joanna Skrzypczak](https://www.frontendmentor.io/profile/joaskr)
