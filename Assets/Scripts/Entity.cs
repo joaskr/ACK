@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Entity : MonoBehaviour
@@ -34,8 +33,8 @@ public class Entity : MonoBehaviour
     protected bool facingRight = true;
 
     public System.Action onFlipped;
-    protected virtual void Awake () { }
-    protected virtual void Start () 
+    protected virtual void Awake() { }
+    protected virtual void Start()
     {
         sr = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponentInChildren<Animator>();
@@ -44,7 +43,7 @@ public class Entity : MonoBehaviour
         stats = GetComponent<CharacterStats>();
         cd = GetComponent<CapsuleCollider2D>();
     }
-    protected virtual void Update () { }
+    protected virtual void Update() { }
 
     public virtual void SlowEntityBy(float _slowPercentage, float _slowDuration)
     {
@@ -56,7 +55,7 @@ public class Entity : MonoBehaviour
         anim.speed = 1;
     }
 
-    public virtual void DamageEffect () 
+    public virtual void DamageEffect()
     {
         fx.StartCoroutine("FlashFx");
         StartCoroutine("HitKnockback");
@@ -118,8 +117,8 @@ public class Entity : MonoBehaviour
         facingDir = facingDir * -1;
         facingRight = !facingRight;
         transform.Rotate(0, 180, 0);
-        if(onFlipped != null)
-           onFlipped();
+        if (onFlipped != null)
+            onFlipped();
     }
 
     public virtual void FlipController(float _x)
@@ -144,10 +143,11 @@ public class Entity : MonoBehaviour
 
     public void MakeTransparent(bool _transparent)
     {
-        if(_transparent)
+        if (_transparent)
         {
             sr.color = Color.clear;
-        } else
+        }
+        else
         {
             sr.color = Color.white;
         }

@@ -15,4 +15,8 @@ public class UI_Options : MonoBehaviour
     {
         
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
